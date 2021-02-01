@@ -3,3 +3,14 @@ on: pull_request_review
 jobs:
   labelWhenApproved:
     runs-on: ubuntu-latest
+
+  steps:
+    - name: labler
+    - uses: keyword
+
+  env:
+    with:
+      APPROVALS: "1"
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ADD_LABEL: cleared
+  
